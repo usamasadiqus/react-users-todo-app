@@ -22,7 +22,7 @@ const Navbar = () => {
           <ul className="navbar-nav mr-auto"></ul>
           <Link
             to="/users/add"
-            className="btn btn-outline-success my-2 my-sm-0"
+            className="btn btn-outline-light my-2 my-sm-0"
             type="submit"
           >
             Add User
