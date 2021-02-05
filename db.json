@@ -229,6 +229,14 @@
         "catchPhrase": "Centralized empowering task-force",
         "bs": "target end-to-end models"
       }
+    },
+    {
+      "name": "Usama Sadiq",
+      "username": "usamasadiq",
+      "email": "usama@gmail.com",
+      "phone": "111-1111-111",
+      "website": "usamasadiqus.web.app",
+      "id": 11
     }
   ]
 }

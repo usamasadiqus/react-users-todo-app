@@ -8,7 +8,7 @@ const Home = () => {
   useEffect(() => {
     const loadUsers = async () => {
       const result = await axios.get("http://localhost:3001/users");
-      setUsers(result.data);
+      setUsers(result.data.reverse());
     };
 
     loadUsers();
