@@ -6,13 +6,18 @@ const Home = () => {
   const [users, setUsers] = useState([]);
 
   useEffect(() => {
-    const loadUsers = async () => {
-      const result = await axios.get("http://localhost:3001/users");
-      setUsers(result.data.reverse());
-    };
-
     loadUsers();
   }, []);
+
+  const loadUsers = async () => {
+    const result = await axios.get("http://localhost:3001/users");
+    setUsers(result.data.reverse());
+  };
+
+  const deleteUsers = async (id) => {
+    await axios.delete(`http://localhost:3001/users/${id}`);
+    loadUsers();
+  };
 
   return (
     <div className="container">
@@ -32,7 +37,7 @@ const Home = () => {
               {users.map((user) => {
                 const { id, name, email, phone } = user;
                 return (
-                  <tr className="text-center">
+                  <tr className="text-center" key={id}>
                     <td>{name}</td>
                     <td>{email}</td>
                     <td>{phone}</td>
@@ -49,7 +54,12 @@ const Home = () => {
                       >
                         Edit
                       </Link>
-                      <button className="btn btn-outline-danger">Delete</button>
+                      <button
+                        className="btn btn-outline-danger"
+                        onClick={() => deleteUsers(id)}
+                      >
+                        Delete
+                      </button>
                     </td>
                   </tr>
                 );
