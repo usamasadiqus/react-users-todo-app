@@ -13,10 +13,12 @@ const Users = () => {
 
   const { id } = useParams();
 
+  const url = "http://localhost:3001/users";
+
   useEffect(() => {
     const loadUsers = async () => {
-      const result = await axios.get(`http://localhost:3001/users/${id}`);
-      setUser(result.data);
+      const { data } = await axios.get(`${url}/${id}`);
+      setUser(data);
     };
 
     loadUsers();

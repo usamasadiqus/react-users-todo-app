@@ -18,10 +18,12 @@ const AddUser = () => {
     setUser({ ...user, [e.target.name]: e.target.value });
   };
 
+  const url = "http://localhost:3001/users";
+
   const onSubmit = async (e) => {
     e.preventDefault();
 
-    await axios.post("http://localhost:3001/users", user);
+    await axios.post(url, user);
     history.push("/");
   };
 

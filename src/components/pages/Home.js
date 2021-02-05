@@ -5,17 +5,19 @@ import axios from "axios";
 const Home = () => {
   const [users, setUsers] = useState([]);
 
+  const url = "http://localhost:3001/users";
+
   useEffect(() => {
     loadUsers();
   }, []);
 
   const loadUsers = async () => {
-    const result = await axios.get("http://localhost:3001/users");
-    setUsers(result.data.reverse());
+    const { data } = await axios.get(url);
+    setUsers(data.reverse());
   };
 
   const deleteUsers = async (id) => {
-    await axios.delete(`http://localhost:3001/users/${id}`);
+    await axios.delete(`${url}/${id}`);
     loadUsers();
   };
 
