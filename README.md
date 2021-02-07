@@ -1,4 +1,4 @@
-# Suggection
+# Suggestion
 
 After clone or download this project 
 first run 
