@@ -1,3 +1,11 @@
+# Suggection
+
+After clone or download this project 
+first run 
+yarn install or npm install 
+then run 
+npm run start:dev or yarn start:dev
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
