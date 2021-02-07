@@ -1,10 +1,6 @@
 # Suggestion
 
-After clone or download this project 
-first run 
-yarn install or npm install 
-then run 
-npm run start:dev or yarn start:dev
+After clone or download this project first run (yarn install or npm install) then run (npm run start:dev or yarn start:dev)
 
 # Getting Started with Create React App
 
